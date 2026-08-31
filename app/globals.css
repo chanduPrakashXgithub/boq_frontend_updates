@@ -788,15 +788,43 @@ input {
     line-height: 1.5;
 }
 
+.workflow-info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #f2f3f2;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 0 auto 24px;
+    max-width: 596px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    line-height: 1.43;
+}
+
+.info-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #64748b;
+}
+
 .stacked-form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    background: rgba(241, 244, 248, 0.9);
-    border: 1px solid rgba(148, 163, 184, 0.2);
-    border-radius: 18px;
-    padding: 24px 22px;
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    gap: 24px;
+    background: #f2f3f2;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 24px;
+    max-width: 596px;
+    margin: 0 auto;
 }
 
 .compact-form {
@@ -808,12 +836,14 @@ input {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    color: var(--auth-text);
-    font-weight: 600;
+    color: #0f172a;
+    font-weight: 500;
 }
 
 .onboarding-field span {
-    font-size: 0.95rem;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0f172a;
 }
 
 .onboarding-field em {
@@ -824,12 +854,13 @@ input {
 .onboarding-field input,
 .onboarding-field select {
     height: 48px;
-    border: 1px solid #d9e3f2;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0 14px;
-    font-size: 1.1rem;
-    color: var(--auth-text);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #0f172a;
+    font-weight: 400;
 }
 
 .option-grid {
@@ -874,9 +905,9 @@ input {
 .markup-field {
     display: flex;
     align-items: center;
-    border: 1px solid #d9e3f2;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
     overflow: hidden;
 }
 
@@ -885,12 +916,16 @@ input {
     height: 48px;
     border: none;
     background: transparent;
-    padding: 0 12px;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #0f172a;
 }
 
 .markup-field span {
     padding-right: 12px;
-    color: var(--auth-muted);
+    color: #0f172a;
+    font-weight: 500;
+    opacity: 0.5;
 }
 
 .status-toggle {
@@ -902,24 +937,25 @@ input {
 .choice-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-    max-width: 720px;
-    margin: 0 auto;
+    gap: 24px;
+    max-width: 596px;
+    margin: 0 auto 32px;
 }
 
 .choice-card {
-    background: rgba(241, 244, 248, 0.9);
-    border: 1px solid rgba(148, 163, 184, 0.2);
-    border-radius: 16px;
-    padding: 26px 20px 18px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 24px;
     text-align: center;
-    min-height: 250px;
+    min-height: 284px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    color: var(--auth-text);
+    color: #0f172a;
+    transition: all 0.2s ease;
 }
 
 .choice-card.selected {
@@ -928,52 +964,61 @@ input {
 }
 
 .choice-icon {
-    width: 62px;
-    height: 62px;
+    width: 56px;
+    height: 56px;
     display: grid;
     place-items: center;
-    border-radius: 14px;
+    border-radius: 8px;
     font-size: 2rem;
     font-weight: 700;
-    color: #1d5fe8;
-    background: rgba(37, 99, 235, 0.08);
-    border: 1px solid rgba(37, 99, 235, 0.18);
+    color: #2563eb;
+    background: #f1f5f9;
 }
 
 .choice-card h3 {
     margin: 0;
-    font-size: 1.15rem;
-    line-height: 1.4;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #0f172a;
 }
 
 .choice-card p {
     margin: 0;
-    color: var(--auth-muted);
-    line-height: 1.5;
+    color: #475569;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 .choice-button,
 .primary-btn,
 .secondary-btn {
-    width: 100%;
-    min-height: 46px;
-    border-radius: 10px;
-    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
     cursor: pointer;
+    padding: 14px 20px;
+    height: 48px;
+    transition: all 0.2s ease;
 }
 
 .choice-button,
 .primary-btn {
-    background: linear-gradient(180deg, #2d7bff 0%, #1e60dd 100%);
-    border: none;
-    color: #fff;
-    box-shadow: 0 10px 18px rgba(37, 99, 235, 0.18);
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.choice-button:hover,
+.primary-btn:hover:not(:disabled) {
+    background: #1e5dc8;
 }
 
 .secondary-btn {
-    background: #fff;
-    border: 1px solid rgba(148, 163, 184, 0.5);
-    color: var(--auth-text);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
 }
 
 .choice-footer,
@@ -981,14 +1026,17 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
-    max-width: 700px;
-    margin: 24px auto 0;
+    gap: 68px;
+    max-width: 596px;
+    margin: 32px auto 0;
 }
 
-.footer-row .secondary-btn,
+.footer-row .secondary-btn {
+    width: 73px;
+}
+
 .footer-row .primary-btn {
-    width: 160px;
+    width: 101px;
 }
 
 .upload-box {

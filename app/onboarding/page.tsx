@@ -338,6 +338,11 @@ function OnboardingContent() {
                                 <h1>{currentTitle}</h1>
                                 <p className="onboarding-subtitle">{currentSubtitle}</p>
 
+                                <div className="workflow-info-box">
+                                    <div className="info-icon">ⓘ</div>
+                                    <span>These settings apply to all BOQs and cost sheets in your workspace. They can be changed later.</span>
+                                </div>
+
                                 <div className="stacked-form compact-form">
                                     <label className="onboarding-field">
                                         <span>Currency <em>*</em></span>
