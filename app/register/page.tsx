@@ -93,8 +93,8 @@ export default function RegisterPage() {
                 <label className="field">
                     <span>Password <em>*</em></span>
                     <div className="auth-password-control">
-                        <input type={showPassword ? "text" : "password"} value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Ex.*********" required autoComplete="new-password" />
-                        <button type="button" className={`password-toggle ${showPassword ? 'active' : ''}`} onClick={() => setShowPassword((value) => !value)} aria-label={showPassword ? "Hide password" : "Show password"} title={showPassword ? "Hide password" : "Show password"}>
+                        <input type={showPassword ? "text" : "password"} value={password} onChange={(event) => setPassword(event.target.value)} placeholder="At least 10 characters" required autoComplete="new-password" />
+                        <button type="button" className="password-toggle" onClick={() => setShowPassword((value) => !value)} aria-label={showPassword ? "Hide password" : "Show password"}>
                             <img src="/assets/password-visibility.svg" alt="" aria-hidden="true" />
                         </button>
                     </div>
@@ -104,7 +104,7 @@ export default function RegisterPage() {
                     <span>Confirm Password <em>*</em></span>
                     <div className="auth-password-control">
                         <input type={showConfirmPassword ? "text" : "password"} value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} placeholder="Re-enter your password" required autoComplete="new-password" />
-                        <button type="button" className={`password-toggle ${showConfirmPassword ? 'active' : ''}`} onClick={() => setShowConfirmPassword((value) => !value)} aria-label={showConfirmPassword ? "Hide password" : "Show password"} title={showConfirmPassword ? "Hide password" : "Show password"}>
+                        <button type="button" className="password-toggle" onClick={() => setShowConfirmPassword((value) => !value)} aria-label={showConfirmPassword ? "Hide password" : "Show password"}>
                             <img src="/assets/password-visibility.svg" alt="" aria-hidden="true" />
                         </button>
                     </div>

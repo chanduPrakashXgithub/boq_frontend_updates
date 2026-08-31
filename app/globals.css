@@ -3414,21 +3414,18 @@ input {
 .auth-password-control {
     position: relative;
     width: 100%;
-    display: flex;
-    align-items: center;
 }
 
 .auth-password-control input {
-    padding-right: 50px;
-    width: 100%;
+    padding-right: 48px;
 }
 
 .password-toggle {
     position: absolute;
     top: 50%;
     right: 12px;
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
     display: grid;
     place-items: center;
     padding: 0;
@@ -3437,40 +3434,11 @@ input {
     background: transparent;
     cursor: pointer;
     transform: translateY(-50%);
-    transition: color 0.2s ease, background-color 0.2s ease;
-    z-index: 10;
-    outline: none;
-    border-radius: 6px;
-}
-
-.password-toggle:hover {
-    color: #0f172a;
-    background: rgba(71, 85, 105, 0.08);
-}
-
-.password-toggle:active {
-    background: rgba(71, 85, 105, 0.15);
-}
-
-.password-toggle:focus {
-    outline: 2px solid #2563eb;
-    outline-offset: -2px;
-}
-
-.password-toggle.active {
-    color: #2563eb;
-    background: rgba(37, 99, 235, 0.08);
-}
-
-.password-toggle.active:hover {
-    background: rgba(37, 99, 235, 0.15);
-    color: #1946b5;
 }
 
 .password-toggle img {
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
+    width: 16px;
+    height: 16px;
 }
 
 /* Onboarding workspace — Figma frame */
